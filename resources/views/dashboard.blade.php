@@ -14,4 +14,7 @@
             </div>
         </div>
     </div>
+    @admin
+    Content only for admin!
+    @endadmin
 </x-app-layout>
