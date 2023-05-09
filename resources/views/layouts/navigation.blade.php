@@ -20,6 +20,9 @@
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
+                <x-nav-link :href="route('leaderboard')" :active="request()->routeIs('leaderboard')">
+                    Leaderboard
+                </x-nav-link>
                 @auth
                     <x-nav-link :href="route('results.index')" :active="request()->routeIs('results.index')">
                         My Results
@@ -49,6 +52,9 @@
                         </x-dropdown-link>
                         <x-dropdown-link :href="route('quizzes')">
                             Quizzes
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('tests')">
+                            Tests
                         </x-dropdown-link>
                     </x-slot>
 
