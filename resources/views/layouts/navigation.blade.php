@@ -20,6 +20,11 @@
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
+                @auth
+                    <x-nav-link :href="route('results.index')" :active="request()->routeIs('results.index')">
+                        My Results
+                    </x-nav-link>
+                @endauth
                 @admin
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
